@@ -1,0 +1,16 @@
+2a60927148abd1d33b818b535e306557
+::res://::1682465234
+icon.svg::CompressedTexture2D::6972276415589238601::1681949373::1681949400::1::::<><>::
+::res://Esc/::1682465186
+corazon_enemy.tscn::PackedScene::7035341571592893973::1682463255::0::1::::<><>::uid://cp02ekisfemsg
+corazon_player.tscn::PackedScene::-1::1681960859::0::1::::<><>::uid://cp02ekisfemsg
+::res://Scrip/::1682465186
+Game.gd::GDScript::-1::1682464448::0::1::::<>Node<>::
+::res://Spr/::1682465186
+1_yHZKuUPofUf39CpZ6frmxw.png::CompressedTexture2D::6352299859424069615::1681950840::1681960856::1::::<><>::
+corazon.png::CompressedTexture2D::5878930506205124170::1681956851::1681960859::1::::<><>::
+LordKasuma.png::CompressedTexture2D::8488556474663668180::1681961646::1681961720::1::::<><>::
+papel.png::CompressedTexture2D::3676843935287173552::1681962554::1681962573::1::::<><>::
+piedra.png::CompressedTexture2D::5820801558727249181::1681962529::1681962573::1::::<><>::
+principal.tscn::PackedScene::5568049866247491298::1682464460::0::1::::<><>::res://Scrip/Game.gd<>res://Esc/corazon_player.tscn<>uid://c7h8bvjbmy2f6<>uid://cwrdpk5p2ara2<>uid://co6v0so3m6kft<>uid://bsndc2jps8xtg<>uid://ddvugnssrvnhl
+tijera.png::CompressedTexture2D::7414406280898841637::1681962570::1681962573::1::::<><>::

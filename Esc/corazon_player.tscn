@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" uid="uid://cp02ekisfemsg" path="res://Spr/corazon.png" id="1_jk0y8"]
+
+[node name="Corazon_Player" type="Sprite2D" groups=["Vidas_Player"]]
+position = Vector2(28.25, 32.75)
+scale = Vector2(0.184322, 0.198598)
+texture = ExtResource("1_jk0y8")

@@ -1,0 +1,123 @@
+[gd_scene load_steps=13 format=3 uid="uid://cllg751hco05s"]
+
+[ext_resource type="Script" path="res://Scrip/Game.gd" id="1_gi67s"]
+[ext_resource type="PackedScene" path="res://Esc/corazon_player.tscn" id="2_1x86r"]
+[ext_resource type="PackedScene" uid="uid://c7h8bvjbmy2f6" path="res://Esc/corazon_enemy.tscn" id="3_0hnip"]
+[ext_resource type="Texture2D" uid="uid://cwrdpk5p2ara2" path="res://Spr/1_yHZKuUPofUf39CpZ6frmxw.png" id="4_k2vsh"]
+[ext_resource type="Texture2D" uid="uid://co6v0so3m6kft" path="res://Spr/piedra.png" id="5_aiauy"]
+[ext_resource type="Texture2D" uid="uid://bsndc2jps8xtg" path="res://Spr/papel.png" id="6_rjm0k"]
+[ext_resource type="Texture2D" uid="uid://ddvugnssrvnhl" path="res://Spr/tijera.png" id="7_0ul6a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rp18"]
+atlas = ExtResource("4_k2vsh")
+region = Rect2(0, 0, 400, 488)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tajqc"]
+atlas = ExtResource("4_k2vsh")
+region = Rect2(400, 0, 400, 488)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46i5c"]
+atlas = ExtResource("4_k2vsh")
+region = Rect2(800, 0, 400, 488)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t17yl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rp18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tajqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46i5c")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aawqo"]
+font_size = 170
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node" type="Node"]
+script = ExtResource("1_gi67s")
+spr_player = ExtResource("2_1x86r")
+spr_enemy = ExtResource("3_0hnip")
+
+[node name="Player" type="AnimatedSprite2D" parent="."]
+position = Vector2(519, 311)
+scale = Vector2(0.320104, 0.260502)
+sprite_frames = SubResource("SpriteFrames_t17yl")
+frame = 3
+
+[node name="Player2" type="AnimatedSprite2D" parent="."]
+position = Vector2(519, 118)
+rotation = -3.14159
+scale = Vector2(0.320104, 0.260502)
+sprite_frames = SubResource("SpriteFrames_t17yl")
+frame = 3
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="GUI" type="Control" parent="." groups=["GUI"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1148.0
+offset_bottom = 650.0
+
+[node name="Player_label" type="Label" parent="GUI"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 55.0
+offset_right = 60.0
+offset_bottom = 81.0
+text = "Player"
+
+[node name="Enemy_label" type="Label" parent="GUI"]
+layout_mode = 0
+offset_left = 1071.0
+offset_top = 61.0
+offset_right = 1124.0
+offset_bottom = 87.0
+text = "Enemy"
+
+[node name="Piedra" type="Button" parent="."]
+offset_left = 165.0
+offset_top = 436.0
+offset_right = 551.0
+offset_bottom = 930.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("5_aiauy")
+
+[node name="Papel" type="Button" parent="."]
+offset_left = 449.0
+offset_top = 433.0
+offset_right = 584.0
+offset_bottom = 576.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("6_rjm0k")
+
+[node name="Tijera" type="Button" parent="."]
+offset_left = 766.0
+offset_top = 439.0
+offset_right = 1211.0
+offset_bottom = 934.0
+scale = Vector2(0.4, 0.4)
+icon = ExtResource("7_0ul6a")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 447.0
+offset_top = 167.0
+offset_right = 878.0
+offset_bottom = 443.0
+text = "0"
+label_settings = SubResource("LabelSettings_aawqo")
+
+[connection signal="pressed" from="Piedra" to="." method="_on_piedra_pressed"]
+[connection signal="pressed" from="Papel" to="." method="_on_papel_pressed"]
+[connection signal="pressed" from="Tijera" to="." method="_on_tijera_pressed"]
